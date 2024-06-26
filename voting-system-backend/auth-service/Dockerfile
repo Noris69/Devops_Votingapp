@@ -8,6 +8,8 @@ RUN npm install
 
 COPY . .
 
+RUN npm rebuild bcrypt 
+
 
 EXPOSE 5001
 
