@@ -4,16 +4,12 @@ const User = require('../models/User');
 const speakeasy = require('speakeasy');
 const qrcode = require('qrcode');
 const nodemailer = require('nodemailer');
-const twilio = require('twilio');
 const Sms77Client = require('sms77-client');
 const { spawn } = require('child_process');
 const path = require('path');
 const fs = require('fs');
 require('dotenv').config(); // Load environment variables
 
-// Twilio configuration
-const twilioClient = twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
-const sms77 = new Sms77Client(process.env.SMS77_API_KEY);
 
 // Function to generate a certificate for a user
 const generateCertificate = (username) => {
