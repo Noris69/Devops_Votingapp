@@ -8,6 +8,9 @@ RUN npm install
 
 COPY . .
 
+RUN npm install -g node-pre-gyp
+
+
 RUN npm rebuild bcrypt --build-from-source
 
 
